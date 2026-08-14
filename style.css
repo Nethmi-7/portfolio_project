@@ -1,12 +1,12 @@
 /* --- Global Theme & Palette --- */
 :root {
-  --bg-color: #000000;       /* Pure Black */
-  --card-bg: rgba(34, 34, 34, 0.75); /* Dark Gray (#222222) with frosted opacity */
+  --bg-color: #000000;       /* Pitch Black */
+  --card-bg: rgba(22, 22, 22, 0.75); /* Dark frosted cards */
   --text-main: #f8fafc;      /* Crisp white */
   --text-muted: #9ca3af;     /* Neutral gray */
   --accent: #1DCD9F;         /* Vibrant Mint / Teal */
-  --accent-dark: #169976;    /* Deep Forest Teal */
-  --border: rgba(29, 205, 159, 0.2); /* Subtle mint glow border */
+  --accent-dark: #169976;    /* Deep Teal */
+  --border: rgba(29, 205, 159, 0.2); 
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -27,36 +27,64 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Layered Geometric Backdrop (Inspired by Image 2) --- */
-body::before,
-body::after {
+/* --- Atmospheric Background Gradient Glow --- */
+body::before {
   content: '';
   position: fixed;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 100vh;
+  background: radial-gradient(circle at 80% 40%, rgba(22, 153, 118, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* --- Translucent Glassmorphic Geometric Diamonds --- */
+.bg-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   pointer-events: none;
+  overflow: hidden;
 }
 
-/* Soft ambient teal glow */
-body::before {
-  top: -10%;
-  right: -10%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(29, 205, 159, 0.15) 0%, rgba(22, 153, 118, 0.05) 50%, transparent 70%);
-  filter: blur(80px);
-}
-
-/* Angled geometric tile overlay */
-body::after {
-  bottom: 5%;
-  left: -5%;
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(135deg, rgba(29, 205, 159, 0.08) 0%, rgba(34, 34, 34, 0.4) 100%);
-  border: 1px solid rgba(29, 205, 159, 0.12);
-  border-radius: 40px;
+.shape {
+  position: absolute;
   transform: rotate(45deg);
-  backdrop-filter: blur(20px);
+  /* Translucent frosted fill without the edge blur haze */
+  background: linear-gradient(135deg, rgba(29, 205, 159, 0.14) 0%, rgba(22, 153, 118, 0.05) 100%);
+  border: 1px solid rgba(29, 205, 159, 0.15);
+}
+
+/* 1. Main Middle Diamond (Bleeding off left edge) */
+.shape-main {
+  width: 330px;
+  height: 330px;
+  top: 18%;
+  left: -140px;
+  border-radius: 54px;
+}
+
+/* 2. Small Floating Diamond (Top-Right of Main) */
+.shape-floating {
+  width: 90px;
+  height: 90px;
+  top: 14%;
+  left: 210px;
+  border-radius: 20px;
+}
+
+/* 3. Bottom-Left Corner Diamond */
+.shape-bottom {
+  width: 110px;
+  height: 110px;
+  bottom: -40px;
+  left: 60px;
+  border-radius: 22px;
 }
 
 /* --- Navigation Bar --- */
@@ -110,11 +138,12 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  position: relative;
 }
 
 .section {
   padding: 3.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .section:last-of-type {
@@ -243,7 +272,7 @@ h2::after {
   text-decoration: underline;
 }
 
-/* --- Contact & Socials --- */
+/* --- Contact Links --- */
 .contact-links {
   display: flex;
   gap: 1rem;
@@ -268,7 +297,7 @@ h2::after {
   background: var(--accent);
   color: #000000;
   font-weight: 600;
-  box-shadow: 0 0 15px rgba(29, 205, 159, 0.4);
+  box-shadow: 0 0 15px rgba(29, 205, 159, 0.3);
 }
 
 /* --- Footer --- */
