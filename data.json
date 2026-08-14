@@ -2,7 +2,7 @@
   "name": "Jane Developer",
   "title": "Software Engineering Student & Open Source Enthusiast",
   "bio": "Building modular web projects, learning system design, and exploring open-source software.",
-  "about": "Second-year engineering student passionate about learning new technologies, writing clean code, and building helpful tools.",
+  "about": "Second year Software Engineering student passionate about learning new technologies, writing clean code, and building helpful tools.",
   "skills": [
     "C",
     "Java",
@@ -18,10 +18,16 @@
       "link": "https://github.com/example/portfolio"
     },
     {
-      "title": "Console Task Tracker",
-      "description": "A lightweight task manager built in C to practice memory management and data structures.",
+      "title": "Second Project",
+      "description": "Description of the third project.",
       "tech": "C",
       "link": "#"
+    },
+    {
+    "title": "Third Project",
+    "description": "Description of the third project.",
+    "tech": "Java / Logic",
+    "link": "#"
     }
   ],
   "socials": {
