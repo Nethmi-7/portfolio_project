@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="#intro" class="nav-logo" id="nav-brand">Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Introduction Section -->
+    <section id="intro" class="section intro-section">
+      <h1 id="user-name">Loading...</h1>
+      <p class="user-tagline" id="user-tagline"></p>
+      <p class="user-summary" id="user-summary"></p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p id="about-text"></p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2>Skills & Technologies</h2>
+      <ul class="skills-grid" id="skills-list">
+        <!-- JavaScript will dynamically add skill items here -->
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid" id="projects-list">
+        <!-- JavaScript will dynamically add project cards here -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Feel free to connect with me:</p>
+      <div class="contact-links" id="contact-info">
+        <!-- JavaScript will populate contact links here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="footer-year"></span> <span id="footer-name"></span>. Built with open-source spirit.</p>
+  </footer>
+
+  <!-- Script to load data.json -->
+  <script src="script.js"></script>
+</body>
+</html>
