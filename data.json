@@ -1,0 +1,32 @@
+{
+  "name": "Jane Developer",
+  "title": "Software Engineering Student & Open Source Enthusiast",
+  "bio": "Building modular web projects, learning system design, and exploring open-source software.",
+  "about": "Second-year engineering student passionate about learning new technologies, writing clean code, and building helpful tools.",
+  "skills": [
+    "C",
+    "Java",
+    "HTML/CSS",
+    "Git & GitHub",
+    "Data Structures"
+  ],
+  "projects": [
+    {
+      "title": "Open-Source Portfolio Template",
+      "description": "A modular, data-driven personal portfolio site powered by a dynamic JSON file.",
+      "tech": "HTML, CSS, JavaScript",
+      "link": "https://github.com/example/portfolio"
+    },
+    {
+      "title": "Console Task Tracker",
+      "description": "A lightweight task manager built in C to practice memory management and data structures.",
+      "tech": "C",
+      "link": "#"
+    }
+  ],
+  "socials": {
+    "github": "https://github.com/example",
+    "linkedin": "https://linkedin.com/in/example",
+    "email": "hello@example.com"
+  }
+}
